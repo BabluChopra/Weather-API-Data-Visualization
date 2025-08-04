@@ -1,6 +1,5 @@
 # Weather-API-Data-Visualization
 
-
 🌦️ PowerBI-WeatherAPI-Dashboard
 Live Weather & AQI Dashboard in Power BI using WeatherAPI
 This project integrates WeatherAPI.com with Power BI to create an interactive dashboard that displays live weather data, AQI levels, and air quality recommendations using reusable DAX measures.
@@ -80,9 +79,6 @@ You can visualize air quality from current.air_quality using these reusable DAX 
 Just replace COLUMN_NAME with pollutants like pm2_5, co, no2, etc.
 
 🎨 AQI Color Template
-DAX
-Copy
-Edit
 AQI Color TEMPLATE =
 VAR AQI = ROUND(SELECTEDVALUE('Current'[current.air_quality.COLUMN_NAME]),0)
 RETURN
@@ -95,10 +91,8 @@ AQI <= 200, "#d99343",
 AQI <= 300, "#ff5b0f",
 "#d95243"
 )
+
 🎨 AQI Suggestion Template
-DAX
-Copy
-Edit
 AQI Suggestion TEMPLATE =
 VAR AQI = ROUND(SELECTEDVALUE('Current'[current.air_quality.COLUMN_NAME]),0)
 RETURN
@@ -111,10 +105,8 @@ AQI <= 200, "Limit prolonged outdoor exertion",
 AQI <= 300, "Avoid outdoor activity if possible",
 "Stay indoors, wear a mask if outside"
 )
+
 🎨 AQI Status Template
-DAX
-Copy
-Edit
 AQI Status TEMPLATE =
 VAR AQI = ROUND(SELECTEDVALUE('Current'[current.air_quality.COLUMN_NAME]),0)
 RETURN
@@ -127,6 +119,8 @@ AQI <= 200, "Unhealthy",
 AQI <= 300, "Very Unhealthy",
 "Hazardous"
 )
+
+
 💡 Quick Tip
 Keep these templates in your report
 
